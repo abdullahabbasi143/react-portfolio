@@ -2,36 +2,41 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import ErrorPage from './pages/ErrorPage';
+import ErrorPage from './components/ErrorPage';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
+import BlogDetails from './components/BlogDetails';
 import reportWebVitals from './reportWebVitals';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import About from './pages/About';
+import Layout from './components/Layout';
+import Intro from './components/Intro';
 
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/contact",
-    element: <Contact />,
-  },
-  {
-    path: "/blog/:blogId",
-    element: <Blog />,
-  },
-]);
+function AppRouter() {
+  return (
+    <Router>
+      <Routes>
+  
+        <Route path="/" element={<Layout />}>
+        <Route path="about" element={<About />} />
+          <Route index element={<App />} />
+          <Route path="intro" element={<Intro />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="blog" element={<Blog />}>
+            <Route path=":blogID" element={<BlogDetails />} />
+          </Route>
+          <Route path="*" element={<ErrorPage />} />
+        </Route>
+      </Routes>
+    </Router>
+  );
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AppRouter />
   </React.StrictMode>
 );
 
