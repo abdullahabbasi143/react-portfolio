@@ -15,7 +15,7 @@ function Intro() {
             </p>
           </div>
           <div className="flex justify-center items-center mt-6 md:mt-0 md:ml-4">
-  <div className="rounded-full w-32 h-32 md:w-80 md:h-80 overflow-hidden">
+  <div className="rounded-full w-70 h-72 md:w-80 md:h-80 overflow-hidden">
     <img src="/images/portfolio-react.jfif" alt="Profile" className="w-full h-full " />
   </div>
 </div>
