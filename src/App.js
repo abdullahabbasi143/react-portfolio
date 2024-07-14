@@ -1,65 +1,35 @@
-import { useEffect, useState } from "react";
-import ViewStudents from "./components/ViewStudents";
-import AddStudents from "./components/AddStudents";
+
 import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
 import { Element } from 'react-scroll';
 
 export default function App(){
-    const studentData = [
-      {id:12, name:'saqib', age:44, grade:'BSCS', email: 'saqibkhattak16@gmail.com'},
-      {id :22, name:'rehman', age:44, grade:'BSCS', email: 'khan_fuuast@gmail.com'},
-      {id :32, name:'lim', age:33, grade:'MCS', email: 'lim@gmail.com'},
-      {id:44, name:'shakeel', age:34, grade:'DBA', email:'shakeel@gmail.com'},
-      {id :56, name:'kem', age:13, grade:'MSCS', email: 'kim@gmail.com'}
-    ]
-    const existingStudentData = window.sessionStorage.getItem('students');
-    const [ student, setStudent ] = useState(existingStudentData ? JSON.parse( existingStudentData ) : studentData)
-    
-    useEffect(()=>{ 
-      window.sessionStorage.setItem('students', JSON.stringify(student))
-      console.log('with variable')
-    }, [student])
 
-    const addNewStudent = (addstudent) => {
-      setStudent([addstudent, ...student]);
-    };
-console.log('without variable')
-    const handleEditStudent = (studentId) => { 
-      alert(studentId)
-    }
-
-    const handleDeleteStudent = (studentId) => {
-
-      const  newStudent = student.filter((stdObj) => stdObj.id !== studentId )
-      // if (a==2) echo 'hello world'; 
-      console.log(newStudent);
-      setStudent( newStudent );
-    }
     return ( 
       <>
       <Navbar/>
       <div>
+      <section id="intro" className="flex items-center justify-center pt-16 p-6 bg-gray-100">
+       
         <Intro />
+        </section>
       </div>
-      <section className="px-6 pb-6 bg-gradient-to-b from-black to-gray-800">
-     <div className="container px-6  mx-auto text-center">
-      <div className="flex flex-wrap justify-center items-center mt-8 text-center md:text-left">
-      <h1 className="text-white text-4xl font-bold md:text-5xl mt-5 mb-4 md:mb-5">About Me</h1>
-      <div className="md:mx-11">
-      <p className="text-sm text-gray-400 mt-3">I am a Junior Web Developer with one year of experience in both front-end and back-end technologies. Over the past year, I have worked on various projects, gaining hands-on experience in building and maintaining websites and web applications.</p>
-      <p className="text-sm text-gray-400 mt-3">On the front-end, I have been focusing on learning and utilizing React.js, and I have developed my portfolio using React to enhance my skills. I am also familiar with other front-end technologies, such as HTML, CSS, and JavaScript.</p>
-      <p className="text-sm text-gray-400 mt-3">For the back-end, I have experience working with Laravel, handling both front-end and back-end tasks within the framework. My background includes creating and integrating APIs, managing databases, and ensuring efficient and secure server-side functionality.</p>
-      <p className="text-sm text-gray-400 mt-3">I am passionate about continuous learning and improving my skills. I completed my Bachelor's degree in Computer Science in 2023. My goal is to become proficient in full-stack development and contribute to creating impactful digital solutions.</p>
-    </div>
-    </div>
-  </div>
-</section>
+      <section id="about" className="bg-black text-white">
+        <div className="container mx-auto  px-6 py-16">
+        <div className="text-center md:text-left">
+  <h1 className="text-4xl font-bold md:text-5xl mt-5 mb-4">About Me</h1>
+  <p className="text-sm  mt-3">
+    I am a Junior Web Developer with one year of experience in both front-end and back-end technologies. On the front-end, I have been focusing on learning and utilizing React.js, while on the back-end, I have experience working with Laravel. I am passionate about continuous learning and improving my skills.
+  </p>
+</div>
+        </div>
+      </section>
 
-      <section className="px-6 pb-6 ">
+      
 
-  <div class="flex justify-center items-center mt-8">
-  <Element name="projects">
+ <section class="container" >
+  <div class=" flex justify-center items-center ">
+  <Element id="projects">
   <h1 class="text-black text-4xl font-bold md:text-5xl mb-4 md:mb-5 text-center md:text-left">Project</h1>
   </Element>
 </div>
@@ -114,9 +84,9 @@ console.log('without variable')
 
 
 
-<section className="px-6 pb-6">
-<Element name="about">
-<div class="flex justify-center items-center mt-8 ">
+<section className="conatiner pb-10" >
+<Element id="contact">
+<div class="flex justify-center items-center  ">
   <h1 class="text-black text-4xl font-bold md:text-5xl mb-4 md:mb-5 text-center md:text-left">Contact </h1>
 </div>
 </Element>
@@ -124,7 +94,9 @@ console.log('without variable')
             <div class="max-w-7xl mx-auto bg-[#2e0249] rounded-lg">
                 <div class="grid md:grid-cols-2 items-center gap-16 sm:p-10 p-4 font-[sans-serif]">
                     <div>
+                    <Element id="contact">
                         <h1 class="text-4xl font-extrabold text-white">Get in Touch</h1>
+                        </Element>
                         <p class="text-sm text-gray-400 mt-3">Have some big idea or brand to develop and need help? Then reach out we'd love to hear about your project  and provide help.</p>
                         <ul class="mt-12 space-y-8">
                             <li class="flex items-center">
