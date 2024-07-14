@@ -1,6 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.content {
-  padding-top: 80px; /* Same value as the navbar height */
+.container {
+  padding: 8rem 0;
+  max-width: 1300px;
+  margin: auto;
+}
+.nav-container {
+  max-width: 1300px;
+
+}
+@media screen and (max-width: 768px) {
+  .container {
+      padding: 2rem 15px;
+  }
+}
+html {
+  scroll-padding-top: 8rem;  /* Adjust this value to match the height of your fixed navbar */
 }
