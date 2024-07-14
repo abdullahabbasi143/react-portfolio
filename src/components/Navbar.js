@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useState } from 'react';
 
 const Navbar = () => {
@@ -46,6 +46,4 @@ const Navbar = () => {
 
 
 export default Navbar;
-=======
 
->>>>>>> 3fa26f03a12ec8149e9f009fe28e2f4b1a7cc6b7
