@@ -25,7 +25,7 @@ export default function App(){
           />
           <div className="flex-1">
             <p className="text-lg mb-8">
-              I am a passionate Junior full-stack developer with one year expereinece  focus on building
+              I am a passionate Junior full-stack developer with one year expereince  focus on building
               modern and responsive web applications. With a strong foundation
               in both frontend and backend technologies, I strive to create
               seamless and efficient user experiences.
