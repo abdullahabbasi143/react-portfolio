@@ -117,7 +117,7 @@ export default function App(){
     <div>
       <div  className="font-bold text-xl mb-2">Airport Cabs UK </div>
       <p  className="text-gray-700 text-base">
-       This is UK-base  client Project to bulid new bussiness website  for my client  and  Provide  Any latest Update  on this Site .
+       This is UK-base  client Project to bulid new  bussiness website  for my client  and  Provide  Any latest Update  on this Site .
       </p>
     </div>
     <div  className="pt-2 pb-2">
