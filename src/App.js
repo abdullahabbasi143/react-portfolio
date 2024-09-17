@@ -2,7 +2,7 @@
 import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
 import { Element } from 'react-scroll';
-import AboutImage from "../assets/Profie.png";
+import AboutImage from "../assets/Profile.png";
 
 export default function App(){
 
