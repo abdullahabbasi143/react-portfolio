@@ -2,7 +2,7 @@
 import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
 import { Element } from 'react-scroll';
-import AboutImage from "../assets/Profile.png";
+import AboutImage from "../assets/images/Profile.png";
 
 export default function App(){
 
@@ -65,7 +65,7 @@ export default function App(){
                   ></div>  
                 </div>
               </div>
-              <div className="flex items-center">
+              <div className=" flex items-center">
                 <label htmlFor="htmlandcss" className="w-2/12">
                   Laravel-Blade &&  Laravel-RestApi
                 </label>
@@ -76,7 +76,7 @@ export default function App(){
                   ></div>
                 </div>
               </div>
-              <div className="flex items-center">
+              <div className=" flex items-center">
                 <label htmlFor="htmlandcss" className="w-2/12">
                    Wordpress 
                 </label>
