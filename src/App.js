@@ -30,7 +30,7 @@ export default function App(){
               I am a passionate Junior full-stack developer with one year expereince  focus on building
               modern and responsive web applications. With a strong foundation
               in both frontend and backend technologies, I strive to create
-              seamless and efficient user experiences.
+              seamless and efficient user experiences..
             </p>
             <div className="space-y-4">
               <div className="flex items-center">
